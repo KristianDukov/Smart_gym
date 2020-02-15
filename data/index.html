@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Workout Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="content">
+      <!-- Canvas which will contain the dial -->
+    	<div class="container">
+        <canvas class="graph" id="repetitions"></canvas>
+    	  <canvas id="repetitionsTitle" class="title"> </canvas>
+    	</div>
+    	<div class="container">
+    	  <canvas class="graph" id="power"></canvas>
+    	  <canvas id="powerTitle" class="title"> </canvas>
+    	</div>
+    	<div class="container">
+    	  <canvas class="graph" id="contraction"></canvas>
+    	  <canvas id="contractionTitle" class="title"> </canvas>
+    	</div>
+    	<div class="container">
+    	  <canvas class="graph" id="set"></canvas>
+    	  <canvas id="setTitle" class="title"> </canvas>
+    	</div>
+    	</br></br>
+    	<div class="container">
+    	  <canvas class="graph" id="extension"></canvas>
+    	  <canvas id="extensionTitle" class="title"> </canvas>
+    	</div>
+    	<div class="container">
+    	  <canvas class="graph" id="rest"></canvas>
+    	  <canvas id="restTitle" class="title"> </canvas>
+    	</div>
+    	</br>
+    	<div class="sliderContainer tooltip">
+        <!-- Slider to control the servo -->
+        <span id="weight" class="tooltiptext"> Weight : <span id="weightValue"> 0 </span> kg/lb</span>
+    	  <input class="slider" type="range" min="10" max="170" step="5" oninput="sendDegrees(this.value)"/>
+    	</div>
+    </br>
+      <div class="bottomInfo">
+        <span class="info">
+          Account : <span id="account"> Loading.. </span>
+        </span>
+        <div class="actionButtons">
+          <div class="buttonContainer">
+            <button id="calibration" class="actionButton" type="button">
+              Calibrate
+            </button>
+          </div>
+          <div class="buttonContainer">
+            <button id="save" class="actionButton" type="button">
+              Save
+            </button>
+          </div>
+        </div>
+        <select id="machineSelect" class="machineSelect">
+          <option value="" disabled selected>Select Machine</option>
+          <option value=1>Machine 1</option>
+          <option value=2>Machine 2</option>
+          <option value=3>Machine 3</option>
+          <option value=4>Machine 4</option>
+          <option value=5>Machine 5</option>
+        </select>
+      </div>
+    </div>
+    <!-- Include our js file at the bottom -->
+    <script src="main.js"></script>
+  </body>
+</html>

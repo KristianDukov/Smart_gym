@@ -1,0 +1,162 @@
+body {
+  background-color: #131313;
+  text-align: center;
+  padding: 30px;
+}
+.content {
+  margin: auto;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Define dial size */
+.graph {
+  width: 150px;
+  height: 150px;
+  margin: 0 15px;
+  background-color: #282828;
+  border-radius: 120px;
+  box-shadow: 0 -1px 2px 1px #4a4a4a;
+}
+.title {
+  display:block;
+  width: 200px;
+  height: 25px;
+  margin: 10px 15px;
+}
+
+/* Style the slider */
+.sliderContainer {
+  width: 65%;
+  position: relative;
+  display: inline-block;
+}
+.slider {
+  margin-top: 55px;
+  width: 100%;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.slider:focus {
+  outline: none;
+}
+.slider::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #282828;
+  border: none;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 27px;
+  width: 27px;
+  border-radius: 50%;
+  background: #fefefe;
+  margin-top: -10px;
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #282828;
+  color: #fefefe;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 50%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #282828 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.bottomInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: #898989;
+}
+.actionButtons {
+  display: flex;
+  flex: 0.5;
+  justify-content: space-between;
+}
+.buttonContainer {
+  background-color: #282828;
+  border-radius: 50%;
+  padding: 8px;
+  margin: 0 10px;
+}
+.actionButton {
+  font-family: sans-serif;
+  font-size: 16px;
+  min-width: 100px;
+  background-color: #282828;
+  padding: 18px 14px;
+  border: 4px solid #131313;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px #282828;
+  color: #898989;
+  cursor: pointer;
+}
+.actionButton:focus {
+  outline-style: none;
+}
+.actionButton:active {
+  box-shadow: 1px 1px 60px #282828;
+}
+.machineSelect {
+  font-family: sans-serif;
+  font-size: 18px;
+  background-color: transparent;
+  border: 0;
+  color: #898989;
+  cursor: pointer;
+}
+.machineSelect option{
+  background-color: #131313;
+}
+
+@media only screen and (max-width: 670px) {
+  .bottomInfo {
+    flex-direction: column;
+  }
+  .buttonContainer {
+    margin: 20px 10px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .bottomInfo {
+    width: 100%;
+  }
+}
